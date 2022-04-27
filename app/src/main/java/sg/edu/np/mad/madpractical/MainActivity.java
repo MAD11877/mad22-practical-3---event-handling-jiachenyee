@@ -39,5 +39,15 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),user.followed ? "Followed" : "Unfollowed",Toast.LENGTH_SHORT).show();
             }
         });
+
+        Button messageButton = findViewById(R.id.messageButton);
+        messageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent messageGroup = new Intent(MainActivity.this, MessageGroup.class);
+
+                startActivity(messageGroup);
+            }
+        });
     }
 }
